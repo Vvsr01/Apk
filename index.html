@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/login.css">
+  <title>LOGIN - PAGE</title>
+</head>
+<body>
+  <form class="login">
+    <a href="/index.html">
+    <ion-icon class="close_icon" name="close"></ion-icon></a>
+    <div class="top">
+    <h2 name="looginn">LOGIN</h2>
+    <label class="lab">Fill Details For Login</label></div>
+    <div class="inputbox">
+      <input type="text" placeholder="Enter user name " class="name" required><label class="labe">Account</label>
+    <span onclick="removetext();">
+      <ion-icon class="clear" name="close-circle"></ion-icon>
+          </span>
+    </div>
+    <div class="inputbox">
+      <input type="password" placeholder="Enter password " required><label class="labe">Password</label>
+      <ion-icon class="clear" name="close-circle"></ion-icon>
+    </div>
+    <div class="forgot">
+      <div class="check">
+      <input name="checkbox" type="checkbox" id="checkbox"><label for="checkbox">Remember me</label></div>
+      <span><a href="#">Forgot Password?</a></span>
+    </div>
+    <button class="submit">LOGIN</button>
+    <span class="sign">Didn't have account? <a href="#" id="signup" onclick="toggleForms()">SIGN UP</a></span>
+  </form>
+  <form class="signup">
+    <a href="/index.html">
+    <ion-icon class="close_icon" name="close"></ion-icon></a>
+    <div class="top">
+    <h2 name="looginn">LOGIN</h2>
+    <label class="lab">Fill Details For Sign up</label></div>
+        <div class="inputbox">
+      <input type="text" placeholder="Enter user name " id="name" required><label class="labe">User Name</label>
+      <span onclick="removetext();">
+      <ion-icon class="cros" name="close-circle"></ion-icon>
+      </span>
+    </div>
+    <div class="inputbox">
+      <input type="email" placeholder="Enter Email id" id="email" required><label class="labe">EMail id</label>
+      <span onclick="removetext();">
+      <ion-icon class="cros" name="close-circle"></ion-icon>
+      </span>
+    </div>
+    <div class="inputbox">
+      <input type="password" placeholder="Create  password " required><label class="labe">Create Password</label>
+      <ion-icon class="cros" name="close-circle"></ion-icon>
+    </div>
+    </div>
+    <div class="inputbox">
+      <input type="password" placeholder="Confirm  password " required><label class="labe">Confirm Password</label> 
+      <ion-icon class="cros" name="close-circle"></ion-icon>
+    </div>
+    <button class="submit">SIGN UP</button>
+    <span class="signin">Already have an account? <a href="#" id="login" onclick="toggleForms();">LOGIN</a></span>
+  </form>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+  const removetext = () => {
+    const name = document.querySelector(".name");
+    const text = document.querySelector("#name");
+    const email = document.querySelector("#email");
+    text.value=" ",
+    email.value=" ",
+    name.value="";
+  };
+    function toggleForms() {
+    var loginForm = document.querySelector(".login");
+    var signupForm = document.querySelector(".signup");
+    
+    if (loginForm.style.display === "none") {
+      loginForm.style.display = "block";
+      signupForm.style.display = "none";
+    } else {
+      loginForm.style.display = "none";
+      signupForm.style.display = "block";
+    }
+  };
+  </script>
+</body>
+      </html>
